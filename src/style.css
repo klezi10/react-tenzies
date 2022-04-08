@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+/* font-family: 'Inter', sans-serif; */
+
+body {
+    background-color: #0B2434;
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    padding: 20px;
+}
+
+.App {
+    background-color: #F5F5F5;
+    max-width: 800px;
+    height: 333px;
+    margin: 0 auto;
+    border-radius: 6px;
+   
+}
