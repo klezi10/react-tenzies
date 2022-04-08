@@ -5,16 +5,18 @@ import Die from "./Die"
 export default function App() {
     return (
         <main className="App">
-            <Die value="1" />
-            <Die value="1" />
-            <Die value="1" />
-            <Die value="1" />
-            <Die value="1" />
-            <Die value="1" />
-            <Die value="1" />
-            <Die value="1" />
-            <Die value="1" />
-            <Die value="6" />
+            <div className="dice-container">
+                <Die value="1" />
+                <Die value="1" />
+                <Die value="1" />
+                <Die value="1" />
+                <Die value="1" />
+                <Die value="1" />
+                <Die value="1" />
+                <Die value="1" />
+                <Die value="1" />
+                <Die value="6" />
+            </div>
         </main>
     )
 }

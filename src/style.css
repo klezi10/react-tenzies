@@ -16,6 +16,29 @@ body {
     max-width: 800px;
     height: 333px;
     margin: 0 auto;
+    border-radius: 6px;     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.Die {
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
-   
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: #ffff;
 }
