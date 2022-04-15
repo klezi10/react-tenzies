@@ -24,10 +24,14 @@ export default function App() {
     }
 
     function rollDice() {
-        setDice(oldDice => oldDice.map(die => {
-            return die.isHeld === false ? 
-            generateNewDice() : die
-        }))
+        if (!tenzies) {
+            setDice(oldDice => oldDice.map(die => {
+                return die.isHeld === false ? generateNewDice() : die
+            }))
+        } else {
+            setTenzies(false)
+            setDice(allNewDice())
+        } 
     }
 
     function holdDice(id) {
@@ -54,11 +58,18 @@ export default function App() {
             }
         }, [dice])
 
-        const title = `Tenzies`
+        // if (tenzies) {
+        //     restartGame()
+        // }
+
+        // function restartGame() {
+        //     setTenzies(false)
+        //     setDice(allNewDice())
+        // }
 
     return (
         <main className="App">
-            <h1 className="title">{tenzies ? "You got it!" : title}</h1>
+            <h1 className="title">{tenzies ? "You got it!" : "Tenzies"}</h1>
             <div className="description">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</div>
             <div className="dice-container">
                {diceElements}
