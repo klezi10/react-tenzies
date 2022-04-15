@@ -2,8 +2,6 @@
     box-sizing: border-box;
 }
 
-/* font-family: 'Inter', sans-serif; */
-
 body {
     background-color: #0B2434;
     margin: 0;
@@ -15,13 +13,37 @@ body {
     background-color: #F5F5F5;
     max-width: 800px;
     width: 100%;
-    height: 333px;
     margin: 0 auto;
     border-radius: 6px;     
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+}
+
+.App .title {
+    color: #2B283A;
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 30px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.03em;
+    margin-top: 0.9em;
+    margin-bottom: 0.4em;
+}
+
+.App .description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.03em;
+    color: #4A4E74;
+    width: 232px;
+    margin: 20px 0 30px;
 }
 
 .App .roll-btn {
@@ -34,6 +56,7 @@ body {
     line-height: 19px;
     padding: 0.7em 1.5em;
     cursor: pointer;
+    margin: 30px 0;
 }
 
 .App .roll-btn:active {
