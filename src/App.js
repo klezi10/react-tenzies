@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./style.css"
 import Die from "./Die"
-
+import getKey from "./Getkey"
 
 export default function App() {
     const [dice, setDice] = useState(allNewDice())
@@ -9,8 +9,13 @@ export default function App() {
     function allNewDice() {
         let diceArray = []
         for (let i = 0; i < 10; i++) {
-            diceArray.push(Math.ceil(Math.random() * 6))
+            diceArray.push({
+                value: Math.ceil(Math.random() * 6),
+                isHeld: false,
+                id: getKey()
+            })
         }
+        console.log(diceArray)
         return diceArray
     }
 
@@ -18,7 +23,12 @@ export default function App() {
         setDice(allNewDice())
     }
 
-    const diceElements = dice.map(die =>  <Die value={die} /> )
+    const diceElements = dice.map(die =>  
+        <Die 
+            key={die.id} 
+            value={die.value} 
+            isHeld={die.isHeld} 
+        /> )
 
     return (
         <main className="App">
