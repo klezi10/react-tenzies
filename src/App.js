@@ -58,15 +58,6 @@ export default function App() {
             }
         }, [dice])
 
-        // if (tenzies) {
-        //     restartGame()
-        // }
-
-        // function restartGame() {
-        //     setTenzies(false)
-        //     setDice(allNewDice())
-        // }
-
     return (
         <main className="App">
             <h1 className="title">{tenzies ? "You got it!" : "Tenzies"}</h1>
